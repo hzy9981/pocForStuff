@@ -1,0 +1,37 @@
+.formBorder{
+	border:1px solid #c0c0c0;
+	height:90%;
+	margin-top:2%;
+}
+
+h2{
+	text-align:center;
+}
+.line_01{
+    padding: 0 20px 0;
+    margin: 20px 0;
+    line-height: 1px;
+    border-left: 360px solid #ddd;
+    border-right: 360px solid #ddd;
+    text-align: center;
+    width:auto;
+}
+.part1{
+	display:inline-block;
+}
+.form-control{
+    border:none;
+    margin-left:10%;
+    -webkit-box-shadow:none;
+    font-size:16px;
+    width:80%;
+    text-align:center;
+    margin-top:10px;
+}
+.line_01{
+	font-size:20px;
+	font-weight:700;
+}
+.part1 input{
+	margin-left:20px;
+}

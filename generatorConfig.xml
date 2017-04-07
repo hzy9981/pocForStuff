@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <context id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/poc" userId="root" password="xszxsz" />
+    <javaModelGenerator targetPackage="com.poc.db.model" targetProject="poc" />
+    <sqlMapGenerator targetPackage="com.poc.db.mapper" targetProject="poc" />
+    <javaClientGenerator targetPackage="com.poc.db.dao" targetProject="poc" type="XMLMAPPER" />
+    <table schema="poc" tableName="admin"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"  enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+    <table schema="poc" tableName="assess"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"  enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+    <table schema="poc" tableName="assessor"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"  enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+    <table schema="poc" tableName="auditor"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"  enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+    <table schema="poc" tableName="claim"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"  enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+    <table schema="poc" tableName="policy"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"  enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+    <table schema="poc" tableName="policy_type"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"  enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+    <table schema="poc" tableName="user"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"  enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+    
+  </context>
+</generatorConfiguration>

@@ -1,0 +1,25 @@
+.toolMenu{
+	width:90%;
+	text-align:center;
+	margin-top:50px;
+	border:1px solid #c0c0c0;
+	height:200px;
+	margin-left:5%;
+	border-radius: 15px;
+	position:relative;
+	display:none
+}
+h3{
+	background:#FFF; 
+	display:block; 
+	height:20px; 
+	width:100px; 
+	position:absolute; 
+	left:10px; 
+	top:-30px; 
+	text-align:center;
+}
+img{
+	margin-top: 20px;
+    margin-left: 10%;
+}

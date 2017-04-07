@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+.noMessage{
+	width:100%;
+	height:auto;
+	text-align:center;
+	margin-left:auto;
+}
+
+#page-wrapper{
+	height:700px;
+}
+.tableTool{
+float:right;
+height:45px;
+width:100%;
+}
+select {
+   background: transparent;
+   width: 200px;
+   padding: 5px;
+   padding-top:4px;
+   font-size: 16px;
+   border: 1px solid #ccc;
+   height: 34px;
+   /* -webkit-appearance: none; for chrome */
+}
+#btn_Search{
+	margin-bottom:3px;
+}
+#searchContent{
+	width: 200px;
+	margin-bottom:3px;
+	height: 34px;
+}
+.tableTool strong{
+	float:left;
+	font-size:25px;
+}
+.searchTool{
+float:right;	
+}
+.pagination{
+   float:right;
+}
