@@ -11,7 +11,7 @@ $(function(){
 
 function checkActor(){
 	if($.cookie("actor")!="assessor"){
-		alert("请使用审核员账号登录");
+		alert("请使用定损员账号登录");
 		location.href = "../../pocForStuff/pages/login.jsp";
 	}
 	//
