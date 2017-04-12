@@ -54,7 +54,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									style="display:none" class="form-control" id="caseImage"
 									name="caseImage" onchange="viewImage(this)" />
 								</label>
-								<!--<p class="help-block">建议尺寸88*88</p>-->
 							</div>
 							<!-- <input type="file" class="btn btn-primary" value="上传图片" id="doc" name="doc" onclick="imgUploadAndShow();"> -->
 							<!-- 图片缩略图展示 -->
