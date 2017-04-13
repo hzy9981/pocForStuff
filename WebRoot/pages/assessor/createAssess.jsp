@@ -26,7 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div id="page-wrapper">
 			<div class="container-fluid">
 				<div class="formBorder">
-					<form id="assessForm">
+					<form id="assessForm" enctype="multipart/form-data">
 						<h2>
 							<strong>创建定损单</strong>
 						</h2>
@@ -34,6 +34,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<div>
 							<div class="form-control part1">
 								<label>车辆车牌</label> <input type="text" name="plateNumber">
+							</div>
+							<div class="form-control part1 div_textarea">
+								<label>定损描述</label> <textarea ></textarea>
 							</div>
 							<div class="form-control part1">
 								<label>申请用户</label> <input type="text" name="applyUser">
@@ -58,8 +61,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<!-- <input type="file" class="btn btn-primary" value="上传图片" id="doc" name="doc" onclick="imgUploadAndShow();"> -->
 							<!-- 图片缩略图展示 -->
 							<div class="imgShow">
-							<div id="localImag">
-								<img id="preview" width=-1 height=-1 style="display: none" />
+							<div id="localImag0">
+								<img id="preview0" class="display-none"/>
+								<!-- <input type="hidden" id="imgUrl" name="imgUrl"> -->
 							</div>
 							</div>
 							<!-- 缩略图展示结束 -->

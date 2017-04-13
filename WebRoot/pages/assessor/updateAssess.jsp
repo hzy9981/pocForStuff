@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'updateAssess.jsp' starting page</title>
+    <title>定损单修改</title>
     
 	
 	<!--
@@ -18,6 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!-- 公共css -->
 <%@include file="../common/commoncss.jsp"%>
 <!-- 自定义css -->
+<link rel="stylesheet" type="text/css" href="<%=basePath%>css/updateAssess.css">
   </head>
   
   <body>
@@ -25,8 +26,35 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!-- 正文内容开始 -->
 		<div id="page-wrapper">
 			<div class="container-fluid">
-			
-			
+			<div class="tableTool">
+			<strong>查看定损单 </strong>
+			<div class="searchTool">
+			<select id="searchCondition">
+			<option value="caseid">案件号</option>
+			<option value="plateNumber">车牌号</option>
+			</select>
+			<input id="searchContent" type="text" placeholder="请输入搜索的内容">
+			<button id="btn_Search" class="red icon-search btn btn-primary">搜索</button>
+			</div>
+			</div>
+			<table class="table table-striped table-bordered table-hover">
+					<thead>
+						<tr>
+						    <th>序号</th>
+							<th>案件号</th>
+							<th>车牌号</th>
+							<th>定损金额</th>
+							<th>申请时间</th>
+							<th>状 态</th>
+							<th>更多</th>
+						</tr>
+					</thead>
+					<tbody id="tbody_claimSchedule">
+						<tr><td class="noMessage"  colspan="7">没 有 任 何 信 息</td></tr>
+					</tbody>
+				</table>
+				<div id="Pagination" class="pagination"></div>
+				<div id="hiddenresult" style="display:none"></div>			
 			</div>
 			</div>
 			<%@include file="../common/common.jsp" %>
@@ -38,4 +66,5 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <script src='<%=basePath%>js/common.js'></script>
   <script src='<%=basePath%>js/commonAssessor.js'></script>
   <!--  自定义js-->
+  
 </html>
