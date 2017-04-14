@@ -57,7 +57,7 @@
     where asid = #{asid,jdbcType=VARCHAR}
   </select>
   
-  <select id="showAssess" resultMap="BaseResultMap" parameterType="java.lang.String" >
+ <select id="showAssess" resultMap="BaseResultMap" parameterType="java.lang.String" >
   select 
    asid, assess.id, caseid, plate_Number, sum, photo, apply_User, apply_User_Phone,assessor.asname assessor, 
     DATE_FORMAT(assess_Time,'%Y年%m月%d日')assess_Time,case_Describe
@@ -69,8 +69,14 @@
       <if test="caseid != null" >
        and caseid = #{caseid,jdbcType=VARCHAR}
       </if>
-      <if test="apply_User != null" >
-      and apply_User = #{applyUser,jdbcType=VARCHAR}
+      <if test="assessor != null" >
+       and assessor = #{assessor,jdbcType=VARCHAR}
+      </if>
+       <if test="plateNumber != null" >
+       and plate_Number = #{plateNumber,jdbcType=VARCHAR}
+      </if>
+      <if test="applyUser != null" >
+       and apply_User = #{applyUser,jdbcType=VARCHAR}
       </if>
   </select>
   

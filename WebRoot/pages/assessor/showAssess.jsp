@@ -40,20 +40,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<tr>
 						    <th>序号</th>
 							<th>案件号</th>
+							<th>定损单号</th>
 							<th>车牌号</th>
-							<th>定损金额</th>
-							<th>申请时间</th>
+							<th>定损金额(¥)</th>
+							<th>定损时间</th>
 							<th>状 态</th>
 							<th>更多</th>
 						</tr>
 					</thead>
 					<tbody id="tbody_claimSchedule">
-						<tr><td class="noMessage"  colspan="7">没 有 任 何 信 息</td></tr>
+						<tr><td class="noMessage"  colspan="8">没 有 任 何 信 息</td></tr>
 					</tbody>
 				</table>
 				<div id="Pagination" class="pagination"></div>
 				<div id="hiddenresult" style="display:none"></div>
-			
 			</div>
 			</div>
 			<%@include file="../common/common.jsp" %>
@@ -65,4 +65,5 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <script src='<%=basePath%>js/common.js'></script>
   <script src='<%=basePath%>js/commonAssessor.js'></script>
   <!--  自定义js-->
+  <script src='<%=basePath%>js/showAssess.js'></script>
 </html>
