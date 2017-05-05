@@ -20,8 +20,8 @@ var showAssessed =function(){
 						i++;
 						tableInfo +="<tr><td>" +i+"</td>"+
 						"<td>"+assess['caseid'] +"</td>"+
-						"<td>"+assess['asid'] +"</td>"
-						"<td>"+aseess['plateNumber'] +"</td>"+
+						"<td>"+assess['asid'] +"</td>"+
+						"<td>"+assess['plateNumber'] +"</td>"+
 						"<td>"+"¥"+assess['sum'] +"</td>"+
 						"<td>"+assess['assessTime'] +"</td>"+
 						"<td>"+assess['status'] +"</td>"+

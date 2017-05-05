@@ -51,7 +51,7 @@ private AssessorMapper assessorMapper;
 		Assess assess  = new Assess();
 		assess.setAssessor(CookieUtil.getCookieByName(request, "loginedId").getValue().split(",")[0]);
 		//CookieUtil.getCookieByName(request, "loginedId")
-		return assessMapper.showAssess(assess);
+		return assessMapper.showAssess(assess);  
 	}
 
 }
