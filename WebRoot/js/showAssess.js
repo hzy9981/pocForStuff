@@ -24,7 +24,6 @@ var showAssessed =function(){
 						"<td>"+assess['plateNumber'] +"</td>"+
 						"<td>"+"¥"+assess['sum'] +"</td>"+
 						"<td>"+assess['assessTime'] +"</td>"+
-						"<td>"+assess['status'] +"</td>"+
 						"<td><a href='#'>详 情</a></td></tr>";
 					});
 					$("#hiddenresult").html(tableInfo);

@@ -137,9 +137,9 @@ String basePath_common = request.getScheme()+"://"+request.getServerName()+":"+r
                             <li>
                                 <a href="<%=basePath_common%>pages/assessor/showAssess.jsp"><i class="fa fa-fw fa-bar-chart-o"></i>查 看 已 定 损</a>
                             </li>
-                            <li>
+                            <%-- <li>
                                 <a href="<%=basePath_common%>pages/assessor/updateAssess.jsp"><i class="fa fa-fw fa-table"></i>定 损 单 修 改</a>
-                            </li>
+                            </li> --%>
                         </ul>
                     </li>
                     

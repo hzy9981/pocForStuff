@@ -44,7 +44,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<th>车牌号</th>
 							<th>定损金额(¥)</th>
 							<th>定损时间</th>
-							<th>状 态</th>
 							<th>更多</th>
 						</tr>
 					</thead>

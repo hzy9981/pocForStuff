@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<h3>定损相关</h3>
 			<a href="<%=basePath%>pages/assessor/createAssess.jsp"><img src="../../pocForStuff/img/assessor/assessor2.png"></a>
 			<a href="<%=basePath%>pages/assessor/showAssess.jsp"><img src="../../pocForStuff/img/assessor/assessor1.png"></a>
-			<a href="<%=basePath%>pages/assessor/updateAssess.jsp"><img src="../../pocForStuff/img/assessor/assessor3.png"></a>
+			<%-- <a href="<%=basePath%>pages/assessor/updateAssess.jsp"><img src="../../pocForStuff/img/assessor/assessor3.png"></a> --%>
 			
 			</div>
 			
