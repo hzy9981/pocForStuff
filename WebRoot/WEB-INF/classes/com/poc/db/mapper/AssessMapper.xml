@@ -99,7 +99,7 @@
       plateNumber, sum, photo, 
       apply_User, apply_User_Phone, assessor, 
       assess_Time, case_Describe)
-    values (#{asid,jdbcType=VARCHAR}, #{id,jdbcType=INTEGER}, #{caseid,jdbcType=VARCHAR}, 
+    values (#{asid,jdbcType=INTEGER}, #{id,jdbcType=INTEGER}, #{caseid,jdbcType=INTEGER},
       #{plateNumber,jdbcType=VARCHAR}, #{sum,jdbcType=VARCHAR}, #{photo,jdbcType=VARCHAR}, 
       #{applyUser,jdbcType=VARCHAR}, #{applyUserPhone,jdbcType=VARCHAR}, #{assessor,jdbcType=VARCHAR}, 
       #{assessTime,jdbcType=VARCHAR}, #{caseDescribe,jdbcType=LONGVARCHAR})

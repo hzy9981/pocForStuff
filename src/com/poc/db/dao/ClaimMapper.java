@@ -3,6 +3,7 @@ package com.poc.db.dao;
 import java.util.List;
 
 import com.poc.db.model.Claim;
+import com.poc.db.model.ClaimAuditorViewCommand;
 
 public interface ClaimMapper {
     /**
@@ -54,4 +55,5 @@ public interface ClaimMapper {
     int updateByPrimaryKey(Claim record);
     
     List<Claim> showClaims(Claim record);
+    
 }

@@ -1,26 +1,26 @@
 $(function(){
-	showAssessed();
+	showAuditedClaim();
 });
 
-//查看已定损的内容
-var showAssessed =function(){
+//查看为审批的理赔单
+var showAuditedClaim =function(){
 	 $.ajax({
-		 url:"/pocForStuff/assessor/showAssessed",
+		 url:"/pocForStuff/auditor/showAuditedClaim",
 		 type:"POST",
 		 dataType:"json",
 		 success:function(data){
 			 if(data!=""){
 				 var tableInfo ="";
 				 var i=1;
-					$.each(data,function(i,assess){
+					$.each(data,function(i,claim){
 						i++;
 						tableInfo +="<tr><td>" +i+"</td>"+
-						"<td>"+assess['caseid'] +"</td>"+
-						"<td>"+assess['asid'] +"</td>"+
-						"<td>"+assess['plateNumber'] +"</td>"+
-						"<td>"+"¥"+assess['sum'] +"</td>"+
-						"<td>"+assess['assessTime'] +"</td>"+
-						"<td><a href='#'>详 情</a></td></tr>";
+						"<td>"+claim['caseid'] +"</td>"+
+						"<td>"+claim['a1id'] +"</td>"+
+						"<td>"+claim['a2id'] +"</td>"+
+						"<td>"+claim['plateNumber'] +"</td>"+
+						"<td>"+claim['caseTime'] +"</td>"+
+						"<td><a href='#'>查 看</a></td></tr>";
 					});
 					$("#hiddenresult").html(tableInfo);
 					$("#Pagination").pagination(data.length, {

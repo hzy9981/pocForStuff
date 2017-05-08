@@ -26,7 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div id="page-wrapper">
 			<div class="container-fluid">
 			<div class="tableTool">
-			<strong>已编辑的理赔单 </strong>
+			<strong>已审批理赔单 </strong>
 			<div class="searchTool">
 			<select id="searchCondition">
 			<option value="caseid">案件号</option>
@@ -63,7 +63,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    <!-- 公共js -->
     <%@include file="../common/commonjs.jsp"%>
  <!--   <!-- Common js -->
-  <script src='../../pocForStuff/js/common.js'></script>
-  <script src='../../pocForStuff/js/commonAuditor.js'></script>
+  <script src='<%=basePath%>js/common.js'></script>
+  <script src='<%=basePath%>js/commonAuditor.js'></script>
   <!--  自定义js-->
+  <script src='<%=basePath%>js/showAuditedClaim.js'></script>
 </html>

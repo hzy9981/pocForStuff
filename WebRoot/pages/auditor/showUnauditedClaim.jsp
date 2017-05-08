@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>未查看的理赔单</title>
+    <title>未审批的理赔单</title>
    
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
@@ -26,7 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div id="page-wrapper">
 			<div class="container-fluid">
 				<div class="tableTool">
-			<strong>已编辑的理赔单 </strong>
+			<strong>未审批的理赔单</strong>
 			<div class="searchTool">
 			<select id="searchCondition">
 			<option value="caseid">案件号</option>
@@ -41,11 +41,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<tr>
 						    <th>序号</th>
 							<th>案件号</th>
+							<th>保单号</th>
+							<th>定损单号</th>
 							<th>车牌号</th>
-							<th>定损金额</th>
-							<th>申请时间</th>
-							<th>状 态</th>
-							<th>更多</th>
+							<th>发生时间</th>
+							<th>详情查看</th>
 						</tr>
 					</thead>
 					<tbody id="tbody_claimSchedule">
@@ -63,7 +63,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    <!-- 公共js -->
     <%@include file="../common/commonjs.jsp"%>
  <!--   <!-- Common js -->
-  <script src='../../pocForStuff/js/common.js'></script>
-  <script src='../../pocForStuff/js/commonAuditor.js'></script>
+  <script src='<%=basePath%>js/common.js'></script>
+  <script src='<%=basePath%>js/commonAuditor.js'></script>
   <!--  自定义js-->
+  <script src='<%=basePath%>js/showUnauditedClaim.js'></script>
 </html>
