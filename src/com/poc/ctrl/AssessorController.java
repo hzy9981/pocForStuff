@@ -26,4 +26,11 @@ public class AssessorController{
 	public String showAssessedByAssess(HttpServletRequest request){
 		 return JSONUtils.toJSONString(assessorService.showAssessedByAssess(request));
 	 }
+	 
+
+	 @ResponseBody
+	 @RequestMapping(value="/assessor/insertAssess", produces = "text/html;charset=UTF-8",method = RequestMethod.POST)
+	public String insertAssess(HttpServletRequest request){
+		 return null;
+	 }
 }
