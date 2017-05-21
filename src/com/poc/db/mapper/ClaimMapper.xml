@@ -24,6 +24,7 @@
     <result column="status" property="status" jdbcType="VARCHAR" />
     <result column="apply_User" property="applyUser" jdbcType="VARCHAR" />
     <result column="create_Time" property="createTime" jdbcType="VARCHAR" />
+    <result column="reason" property="reason" jdbcType="VARCHAR" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.poc.db.model.Claim" extends="BaseResultMap" >
     <!--
@@ -40,7 +41,7 @@
       This element was generated on Wed Mar 08 14:38:21 CST 2017.
     -->
     caseid, id, a1id, a2id, recognizee, plate_Number, case_TIme, case_Place, report_Time, 
-    report_Person, report_Person_Mobile, driver, driver_Mobile, claim_Time, status, apply_User,create_Time
+    report_Person, report_Person_Mobile, driver, driver_Mobile, claim_Time, status, apply_User,create_Time,reason
   </sql>
   <sql id="Blob_Column_List" >
     <!--
@@ -104,13 +105,13 @@
       case_TIme, case_Place, report_Time, 
       report_Person, report_Person_Mobile, driver, 
       driver_Mobile, claim_Time, status, 
-      apply_User, case_Describe,create_Time)
+      apply_User, case_Describe,create_Time,reason)
     values (#{caseid,jdbcType=VARCHAR}, #{id,jdbcType=INTEGER}, #{a1id,jdbcType=VARCHAR}, 
       #{a2id,jdbcType=VARCHAR}, #{recognizee,jdbcType=VARCHAR}, #{plateNumber,jdbcType=VARCHAR}, 
       #{caseTime,jdbcType=VARCHAR}, #{casePlace,jdbcType=VARCHAR}, #{reportTime,jdbcType=VARCHAR}, 
       #{reportPerson,jdbcType=VARCHAR}, #{reportPersonMobile,jdbcType=VARCHAR}, #{driver,jdbcType=VARCHAR}, 
       #{driverMobile,jdbcType=VARCHAR}, #{claimTime,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
-      #{applyUser,jdbcType=VARCHAR}, #{caseDescribe,jdbcType=LONGVARCHAR},now())
+      #{applyUser,jdbcType=VARCHAR}, #{caseDescribe,jdbcType=LONGVARCHAR},now(),reason)
   </insert>
   <insert id="insertSelective" parameterType="com.poc.db.model.Claim" >
     <!--
@@ -171,6 +172,9 @@
       <if test="caseDescribe != null" >
         case_Describe,
       </if>
+      <if test="reason != null" >
+        reason,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="caseid != null" >
@@ -223,6 +227,9 @@
       </if>
       <if test="caseDescribe != null" >
         #{caseDescribe,jdbcType=LONGVARCHAR},
+      </if>
+        <if test="reason != null" >
+       #{reason,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -282,6 +289,9 @@
       <if test="caseDescribe != null" >
         case_Describe = #{caseDescribe,jdbcType=LONGVARCHAR},
       </if>
+      <if test="reason != null" >
+        reason = #{reason,jdbcType=VARCHAR},
+      </if>
     </set>
     where caseid = #{caseid,jdbcType=VARCHAR}
   </update>
@@ -307,7 +317,8 @@
       claim_Time = #{claimTime,jdbcType=VARCHAR},
       status = #{status,jdbcType=VARCHAR},
       apply_User = #{applyUser,jdbcType=VARCHAR},
-      case_Describe = #{caseDescribe,jdbcType=LONGVARCHAR}
+      case_Describe = #{caseDescribe,jdbcType=LONGVARCHAR},
+      reason = #{reason,jdbcType=VARCHAR}
     where caseid = #{caseid,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.poc.db.model.Claim" >
