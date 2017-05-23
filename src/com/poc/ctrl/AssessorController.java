@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.alibaba.fastjson.JSON;
+import com.poc.db.model.Assess;
 import com.poc.service.AssessorService;
 import com.poc.util.JSONUtils;
 
@@ -23,8 +23,8 @@ public class AssessorController{
 	
 	 @ResponseBody
 	 @RequestMapping(value="/assessor/showAssessed", produces = "text/html;charset=UTF-8",method = RequestMethod.POST)
-	public String showAssessedByAssess(HttpServletRequest request){
-		 return JSONUtils.toJSONString(assessorService.showAssessedByAssess(request));
+	public String showAssessedByAssess(Assess assess,HttpServletRequest request){
+		 return JSONUtils.toJSONString(assessorService.showAssessedByAssess(assess,request));
 	 }
 	 
 

@@ -47,8 +47,7 @@ private AssessorMapper assessorMapper;
 	}
 	
 	@Override
-	public List<Assess> showAssessedByAssess(HttpServletRequest request) {
-		Assess assess  = new Assess();
+	public List<Assess> showAssessedByAssess(Assess assess,HttpServletRequest request) {
 		assess.setAssessor(CookieUtil.getCookieByName(request, "loginedId").getValue().split(",")[0]);
 		//CookieUtil.getCookieByName(request, "loginedId")
 		return assessMapper.showAssess(assess);  

@@ -17,4 +17,5 @@ public interface AuditorService {
   
   List<Claim> showAuditedClaim(Claim claim,HttpServletRequest request);
   
+  List<Claim> showClaim(Claim claim);
   }

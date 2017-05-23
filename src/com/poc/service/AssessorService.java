@@ -10,5 +10,5 @@ import com.poc.db.model.Assess;
 public interface AssessorService {
  String assessorLogin(String id,String password,HttpServletResponse response);
 
- List<Assess> showAssessedByAssess(HttpServletRequest request);
+ List<Assess> showAssessedByAssess(Assess assess,HttpServletRequest request);
 }

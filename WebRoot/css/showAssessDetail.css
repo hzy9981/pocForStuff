@@ -1,0 +1,97 @@
+.formBorder {
+	border: 1px solid #c0c0c0;
+	height: auto;
+	margin-top: 2%;
+}
+
+h2 {
+	text-align: center;
+}
+
+.line_01 {
+	padding: 0 20px 0;
+	margin: 20px 0;
+	line-height: 1px;
+	border-left: 360px solid #ddd;
+	border-right: 360px solid #ddd;
+	text-align: center;
+	width: auto;
+}
+
+.part1 {
+	display: inline-block;
+}
+
+.form-control {
+	border: none;
+	margin-left: 10%;
+	-webkit-box-shadow: none;
+	font-size: 16px;
+	width: 35%;
+	margin-top: 10px;
+}
+
+.line_01 {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.part1 input {
+	margin-left: 20px;
+}
+
+#uploadImg {
+	float: right;
+	margin-top: -8px;
+	margin-right: 2px;
+}
+
+.imgShow {
+	height: 180px;
+	margin-top: 10px;
+	border: 1px solid blue;
+}
+
+#assessSubmit {
+	text-align: center;
+	margin-top: 15px;
+	margin-left: 48%;
+}
+
+.submitTool {
+	width: auto;
+}
+
+
+#caseIma,#localImag{
+	margin-left:10px;
+}
+
+.imgShow div img{
+	border:none;
+	width: 200px !important;
+	height: 173px !important;
+	margin:2px;
+	margin-left:9px;
+}
+.imgShow div{
+	display:inline-block;
+}
+.form-control textarea{
+	width:90% !important;
+	height:90%;
+	resize:none;
+}
+.div_textarea{
+	float:right;
+	height:165px;
+	margin-top:0px;
+	margin-right:30px;
+}
+.display-none{
+	display:none;
+}
+
+#form_updateUser .form-control{
+	padding:none;
+}

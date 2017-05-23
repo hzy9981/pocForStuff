@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+.scrollbar
+{
+	margin-left: 30px;
+	float: left;
+	height: 650px;
+	width: 90%px;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+#style-scrollbar::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-scrollbar::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#style-scrollbar::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+p
+{
+	font-size:18px;
+}
+h1
+{
+	text-align:center;
+}
+#btn_AlreadyRead{
+	text-align:center;
+	margin-left:46%;
+	margin-top:40px;
+}
+.form-control-inline {
+    width:28%;
+    display:inline;
+    margin-bottom:8px;
+}
+.form-group-inline{
+	display:inline;
+	width:
+	
+}
+form{
+	text-align:center;
+	border:1px;
+	border-color:#333;
+}
+.form-group-inline div{
+	margin-left:2px;
+	width:10%;
+	display:inline-block;
+	font-weight:bold;
+}
+.form-group-inline div span{
+	font-size:16px;
+}
+textarea{
+	width:94% !important; 
+	height:30% !important;
+	margin-left:4%;
+	font-size:16px;
+}
+.form-group input[type='checkbox']{
+	margin-top:40px;
+	font-size:16px;
+}
+.form-group span{
+	font-size:16px;
+}
+.footButton{
+	margin-top:30px;
+}
+#div_ClaimApplication{
+	display:none;
+}

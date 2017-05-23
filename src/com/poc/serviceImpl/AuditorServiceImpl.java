@@ -71,4 +71,10 @@ public List<Claim> showAuditedClaim(Claim claim, HttpServletRequest request) {
 	claimList.addAll(claimMapper.showClaims(claim));
 	return claimList;
 }
+
+@Override
+public List<Claim> showClaim(Claim claim) {
+	// TODO Auto-generated method stub
+	return claimMapper.showClaims(claim);
+}
 }

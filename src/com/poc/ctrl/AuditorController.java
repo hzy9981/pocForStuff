@@ -34,12 +34,18 @@ public class AuditorController {
 	 @ResponseBody
 	 @RequestMapping(value="/auditor/changeAuditedClaim", produces = "text/html;charset=UTF-8",method = RequestMethod.POST)
 	 public String changeAuditedClaim(Claim claim,HttpServletRequest request){
-		 return JSONUtils.toJSONString(auditorService.showUnauditedClaim(claim, request));
+		 return JSONUtils.toJSONString(auditorService.changeAuditedClaim(claim, request));
 	 }
 	 
 	 @ResponseBody
 	 @RequestMapping(value="/auditor/showAuditedClaim", produces = "text/html;charset=UTF-8",method = RequestMethod.POST)
 	 public String showAuditedClaim(Claim claim,HttpServletRequest request){
 		 return JSONUtils.toJSONString(auditorService.showAuditedClaim(claim, request));
+	 }
+	 
+	 @ResponseBody
+	 @RequestMapping(value="/auditor/showClaim", produces = "text/html;charset=UTF-8",method = RequestMethod.POST)
+	 public String showClaim(Claim claim){
+		 return JSONUtils.toJSONString(auditorService.showClaim(claim));
 	 }
 }

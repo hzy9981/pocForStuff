@@ -24,6 +24,7 @@
     <result column="status" property="status" jdbcType="VARCHAR" />
     <result column="apply_User" property="applyUser" jdbcType="VARCHAR" />
     <result column="create_Time" property="createTime" jdbcType="VARCHAR" />
+    <result column="case_Describe" property="caseDescribe" jdbcType="LONGVARCHAR" />
     <result column="reason" property="reason" jdbcType="VARCHAR" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.poc.db.model.Claim" extends="BaseResultMap" >
