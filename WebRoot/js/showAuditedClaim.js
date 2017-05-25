@@ -19,10 +19,10 @@ var showAuditedClaim =function(){
 						i++;
 						tableInfo +="<tr><td>" +i+"</td>"+
 						"<td>"+claim['caseid'] +"</td>"+
-						"<td>"+claim['a1id'] +"</td>"+
-						"<td>"+claim['a2id'] +"</td>"+
 						"<td>"+claim['plateNumber'] +"</td>"+
+						"<td>"+claim['recognizee'] +"</td>"+
 						"<td>"+claim['caseTime'] +"</td>"+
+						"<td>"+claim['status'] +"</td>"+
 						"<td><a onclick='showClaimDetail(this)' abc='"+claim['caseid']+"'>详 情</a></td></tr>";
 					});
 					$("#hiddenresult").html(tableInfo);
@@ -70,10 +70,11 @@ var searchClaim =function(){
 					$.each(data,function(i,Claim){
 						i++;
 						tableInfo +="<tr><td>" +i+"</td>"+
-						"<td>"+Claim['id'] +"</td>"+
-						"<td>"+Claim['recognizee'] +"</td>"+
-						"<td>"+Claim['plateNumber'] +"</td>"+
-						"<td>"+Claim['createTime'] +"</td>"+
+						"<td>"+claim['caseid'] +"</td>"+
+						"<td>"+claim['plateNumber'] +"</td>"+
+						"<td>"+claim['sum'] +"</td>"+
+						"<td>"+claim['caseTime'] +"</td>"+
+						"<td>"+claim['status'] +"</td>"+
 						"<td><a onclick='showClaimDetail(this)' abc='"+Claim['caseid']+"'>详 情</a></td></tr>";
 					});
 					$("#hiddenresult").html(tableInfo);
@@ -93,5 +94,5 @@ var searchClaim =function(){
 
 var showClaimDetail = function(a){
 	var caseid = $("a").attr("abc");
-	window.open("/pocForStuff/pages/auditor/showClaimDetail.jsp?caseid="+caseid);
+	window.open("/pocForStuff/pages/auditor/showClaimDetail.jsp?caseid="+caseid+"&action=show");
 }

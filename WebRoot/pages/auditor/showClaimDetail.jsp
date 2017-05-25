@@ -119,11 +119,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<textarea id="reason" name="reason" class="form-control"></textarea>
 	    </div>
 	    	    
-	  <!--   <div class="footButton">
-	    <input id="btn_Update" type="button" class="btn btn-primary"  value="修 改">
-	    <input id="btn_Insert" type="button" class="btn btn-primary"  value="新 增">
-	    <input id="btn_Delete" type="button" class="btn btn-primary"  value="删 除">
-	    </div> -->
+   <div class="footButton">
+	    <input id="btn_Pass" type="button" class="btn btn-primary"  value="通  过">
+	    <input id="btn_Wait" type="button" class="btn btn-primary"  value="待  定">
+	    <input id="btn_Refuse" type="button" class="btn btn-primary"  value="退  回">
+   </div>
 	    </form>
 			</div>
 		</div>

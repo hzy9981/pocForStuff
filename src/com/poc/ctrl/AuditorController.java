@@ -48,4 +48,10 @@ public class AuditorController {
 	 public String showClaim(Claim claim){
 		 return JSONUtils.toJSONString(auditorService.showClaim(claim));
 	 }
+	 
+	@ResponseBody
+	@RequestMapping(value="/auditor/updateClaim", produces = "text/html;charset=UTF-8",method = RequestMethod.POST)
+	public void updateClaim(Claim claim){
+		auditorService.updateClaim(claim);
+   }  
 }

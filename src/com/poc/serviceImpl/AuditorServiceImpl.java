@@ -77,4 +77,9 @@ public List<Claim> showClaim(Claim claim) {
 	// TODO Auto-generated method stub
 	return claimMapper.showClaims(claim);
 }
+
+@Override
+public void updateClaim(Claim claim) {
+	claimMapper.updateByPrimaryKeySelective(claim);
+}
 }

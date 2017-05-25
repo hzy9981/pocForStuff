@@ -42,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						    <th>序号</th>
 							<th>案件号</th>
 							<th>车牌号</th>
-							<th>定损金额</th>
+							<th>被保人</th>
 							<th>申请时间</th>
 							<th>状 态</th>
 							<th>更多</th>
