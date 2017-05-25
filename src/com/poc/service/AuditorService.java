@@ -5,6 +5,9 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
 import com.poc.db.model.Claim;
 
 public interface AuditorService {
@@ -20,4 +23,6 @@ public interface AuditorService {
   List<Claim> showClaim(Claim claim);
   
   void updateClaim(Claim claim);
+  
+  void uploadFile(HttpServletRequest request,HttpServletResponse response);
   }

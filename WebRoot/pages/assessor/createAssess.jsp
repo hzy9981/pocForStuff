@@ -26,7 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div id="page-wrapper">
 			<div class="container-fluid">
 				<div class="formBorder">
-					<form id="assessForm" enctype="multipart/form-data">
+					<form id="assessForm" enctype="multipart/form-data" action="<%=basePath%>auditor/upload" method="post">
 						<h2>
 							<strong>创建定损单</strong>
 						</h2>
@@ -53,9 +53,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<div class="line_01">图 片 上 传</div>
 							<div class="form-group" id="caseIma">
 								<label class="control-label">案例图片</label> <label
-									class="btn btn-primary">选择图片 <input type="file"
-									style="display:none" class="form-control" id="caseImage"
-									name="caseImage" onchange="viewImage(this)" />
+									class="btn btn-primary">选择图片
+				 <input type="file"	style="display:none" class="form-control" id="caseImage" name="caseImage" onchange="viewImage(this)" />
 								</label>
 							</div>
 							<!-- <input type="file" class="btn btn-primary" value="上传图片" id="doc" name="doc" onclick="imgUploadAndShow();"> -->

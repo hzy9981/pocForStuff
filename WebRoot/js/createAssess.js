@@ -2,8 +2,12 @@ var imgCount=0;
 //展示上传的图片的缩略图
 function viewImage(file){
     //var preview = document.getElementById('preview');
+	var tempPath = $(file).val();
+	var fileext = tempPath.substring(tempPath.lastIndexOf("."));
+	//alert(fileext);
+	if(fileext==".png"||fileext==".jpg"||fileext==".jpeg"){
 	if(imgCount<=5){
-    if(file.files && file.files[0]){
+    if(file.files && file.files[0]){ 
         //火狐下
     	//$("#preview"+imgCount).attr("display","block");
         //preview.src = window.URL.createObjectURL(file.files[0]);
@@ -13,11 +17,13 @@ function viewImage(file){
 							 "<img id='preview"+imgCount+"' class='display-none'/>"+
 							 "</div>"
 							)
-    }
-    
+                                    } 
     }else{
     	alert("最多只能上传5张图片哦!");
     }
+	}else{
+		alert("仅允许上传图片格式的文件")
+	}
 	
     /*else{
         //ie下，使用滤镜

@@ -1,5 +1,6 @@
 package com.poc.serviceImpl;
 
+import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.poc.db.dao.AuditorMapper;
 import com.poc.db.dao.ClaimMapper;
@@ -81,5 +83,10 @@ public List<Claim> showClaim(Claim claim) {
 @Override
 public void updateClaim(Claim claim) {
 	claimMapper.updateByPrimaryKeySelective(claim);
+}
+
+@Override
+public void uploadFile(HttpServletRequest request,HttpServletResponse response) {
+	
 }
 }
