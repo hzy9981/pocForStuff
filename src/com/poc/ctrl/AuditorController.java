@@ -54,4 +54,11 @@ public class AuditorController {
 	public void updateClaim(Claim claim){
 		auditorService.updateClaim(claim);
    }  
+	
+	
+	/*@ResponseBody
+	@RequestMapping(value="/auditor/uploadFile", produces = "text/html;charset=UTF-8",method = RequestMethod.POST)
+	public void updateClaim(Claim claim){
+		auditorService.updateClaim(claim);
+   }  */
 }
