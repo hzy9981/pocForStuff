@@ -6,7 +6,7 @@ function viewImage(file){
 	var fileext = tempPath.substring(tempPath.lastIndexOf("."));
 	//alert(fileext);
 	if(fileext==".png"||fileext==".jpg"||fileext==".jpeg"){
-	if(imgCount<=5){
+	if(imgCount<5){
     if(file.files && file.files[0]){ 
         //火狐下
     	//$("#preview"+imgCount).attr("display","block");
@@ -17,6 +17,10 @@ function viewImage(file){
 							 "<img id='preview"+imgCount+"' class='display-none'/>"+
 							 "</div>"
 							)
+		$(".chooseImage").hide().after("<label class='btn btn-primary chooseImage'>选择图片" +
+				"<input type='file'	name='files' style='display:none' class='form-control' onchange='viewImage(this)' />"+
+				"</label>"
+				).removeClass("chooseImage");
                                     } 
     }else{
     	alert("最多只能上传5张图片哦!");

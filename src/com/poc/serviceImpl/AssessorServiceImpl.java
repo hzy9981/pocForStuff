@@ -1,7 +1,11 @@
 package com.poc.serviceImpl;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.poc.db.dao.AssessMapper;
 import com.poc.db.dao.AssessorMapper;
@@ -51,6 +56,37 @@ private AssessorMapper assessorMapper;
 		assess.setAssessor(CookieUtil.getCookieByName(request, "loginedId").getValue().split(",")[0]);
 		//CookieUtil.getCookieByName(request, "loginedId")
 		return assessMapper.showAssess(assess);  
+	}
+
+	@Override
+	public void insertAssess(MultipartFile[] files, Assess assess) throws IllegalStateException, IOException{
+		String photoPath = "";
+		 for(int i = 0;i<files.length-1;i++){
+			 int pre = (int) System.currentTimeMillis();
+			 if(files[i]!=null){
+				 //取得当前上传文件的文件名称  
+                 String myFileName = files[i].getOriginalFilename();  
+                 //如果名称不为“”,说明该文件存在，否则说明该文件不存在  
+                 if(myFileName.trim() !=""){  
+                    // System.out.println(myFileName);  
+                     //重命名上传后的文件名  
+                     String fileName = files[i].getOriginalFilename();  
+                     //定义上传路径  
+                     String path = "D:/upload/" + fileName;
+                     photoPath += ","+path;
+                     File localFile = new File(path);  
+                     files[i].transferTo(localFile);  
+                 }  
+			 }
+			 int finaltime = (int) System.currentTimeMillis();
+			// System.out.println(finaltime - pre); 
+		 }
+		 Date date=new Date();
+		 SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddHHmmss");
+		 assess.setAsid(sdf.format(date));
+		 assess.setPhoto(photoPath);
+		 assessMapper.insertSelective(assess);
+		 //System.out.println(files.length);
 	}
 
 }

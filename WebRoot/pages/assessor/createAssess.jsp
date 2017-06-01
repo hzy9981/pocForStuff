@@ -26,7 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div id="page-wrapper">
 			<div class="container-fluid">
 				<div class="formBorder">
-					<form id="assessForm" enctype="multipart/form-data" action="<%=basePath%>auditor/upload" method="post">
+					<form id="assessForm" enctype="multipart/form-data" action="<%=basePath%>assessor/insertAssess" method="post">
 						<h2>
 							<strong>创建定损单</strong>
 						</h2>
@@ -36,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<label>车辆车牌</label> <input type="text" name="plateNumber">
 							</div>
 							<div class="form-control part1 div_textarea">
-								<label>定损描述</label> <textarea ></textarea>
+								<label>定损描述</label> <textarea name="describe"></textarea>
 							</div>
 							<div class="form-control part1">
 								<label>申请用户</label> <input type="text" name="applyUser">
@@ -52,9 +52,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<div>
 							<div class="line_01">图 片 上 传</div>
 							<div class="form-group" id="caseIma">
-								<label class="control-label">案例图片</label> <label
-									class="btn btn-primary">选择图片
-				 <input type="file"	style="display:none" class="form-control" id="caseImage" name="caseImage" onchange="viewImage(this)" />
+								<label class="control-label">案例图片</label> 
+								<label 
+									class="btn btn-primary chooseImage">选择图片
+				 <input type="file"	style="display:none" class="form-control" id="caseImage" name="files" onchange="viewImage(this)" />
 								</label>
 							</div>
 							<!-- <input type="file" class="btn btn-primary" value="上传图片" id="doc" name="doc" onclick="imgUploadAndShow();"> -->
