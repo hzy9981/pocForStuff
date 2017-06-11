@@ -15,5 +15,6 @@ public interface AssessorService {
 
  List<Assess> showAssessedByAssess(Assess assess,HttpServletRequest request);
  
- void insertAssess(MultipartFile[] files,Assess assess) throws IllegalStateException, IOException;
+ void insertAssess(MultipartFile[] files, Assess assess, HttpServletRequest request)
+		throws IllegalStateException, IOException;
 }

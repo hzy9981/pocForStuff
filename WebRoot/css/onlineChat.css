@@ -1,0 +1,36 @@
+.queList{
+	/* border:1px solid #808069; */
+	height:450px;
+	width:30%;
+	display:inline-block;
+	float:left;
+}
+.queAnswer{
+	margin-top:10%;
+	border:1px solid #808069;
+	height:450px;
+	width:60%;
+	margin-left:20%;
+	display:inline-block;
+}
+
+  input#chat {  
+            width: 60%;
+            margin-left:20%; 
+        }  
+  
+  
+        #console {  
+            border: 1px solid #CCCCCC;  
+            border-right-color: #999999;  
+            border-bottom-color: #999999;  
+            height: 450px;  
+            overflow-y: scroll;  
+            padding: 5px;  
+            width: 100%;  
+        }  
+  
+        #console p {  
+            padding: 0;  
+            margin: 0;  
+        }  

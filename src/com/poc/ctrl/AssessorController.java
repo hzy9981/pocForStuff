@@ -38,7 +38,7 @@ public class AssessorController{
 	 
 
 	 @RequestMapping(value="/assessor/insertAssess",produces = "text/html;charset=UTF-8",method = RequestMethod.POST)  
-	 public void upload(@RequestParam("files") MultipartFile[] files,Assess assess) throws IllegalStateException, IOException{
-		 assessorService.insertAssess(files, assess);
+	 public void upload(@RequestParam("files") MultipartFile[] files,Assess assess,HttpServletRequest request) throws IllegalStateException, IOException{
+		 assessorService.insertAssess(files, assess,request);
 	    }  
 }

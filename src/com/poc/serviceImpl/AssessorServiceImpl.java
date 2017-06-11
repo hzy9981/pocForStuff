@@ -59,9 +59,11 @@ private AssessorMapper assessorMapper;
 	}
 
 	@Override
-	public void insertAssess(MultipartFile[] files, Assess assess) throws IllegalStateException, IOException{
+	public void insertAssess(MultipartFile[] files, Assess assess,HttpServletRequest request) throws IllegalStateException, IOException{
 		String photoPath = "";
-		 for(int i = 0;i<files.length-1;i++){
+		 Date date=new Date();
+		 SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddhhmmssSSS");
+		 for(int i = 0;i<=files.length-1;i++){
 			 int pre = (int) System.currentTimeMillis();
 			 if(files[i]!=null){
 				 //取得当前上传文件的文件名称  
@@ -72,8 +74,9 @@ private AssessorMapper assessorMapper;
                      //重命名上传后的文件名  
                      String fileName = files[i].getOriginalFilename();  
                      //定义上传路径  
-                     String path = "D:/upload/" + fileName;
-                     photoPath += ","+path;
+                     String path = "D:/upload/"+sdf.format(date)+"/" + fileName;
+                     photoPath += ",";
+                     photoPath += path;
                      File localFile = new File(path);  
                      files[i].transferTo(localFile);  
                  }  
@@ -81,12 +84,14 @@ private AssessorMapper assessorMapper;
 			 int finaltime = (int) System.currentTimeMillis();
 			// System.out.println(finaltime - pre); 
 		 }
-		 Date date=new Date();
-		 SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddHHmmss");
+		 SimpleDateFormat sdf2=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 		 assess.setAsid(sdf.format(date));
+		 assess.setAssessTime(sdf2.format(date));
 		 assess.setPhoto(photoPath);
+		 assess.setAssessor(CookieUtil.getCookieByName(request, "loginedId").getValue().split(",")[0]);
 		 assessMapper.insertSelective(assess);
 		 //System.out.println(files.length);
 	}
+
 
 }

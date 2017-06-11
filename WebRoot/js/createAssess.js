@@ -49,3 +49,10 @@ function viewImage(file){
         } 
         return true; */
 }
+
+$(function(){
+	$("#assessSubmit").click(function(){
+		$("#assessForm").ajaxSubmit();
+		alert("新定损添加成功");
+	})
+})

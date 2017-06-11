@@ -70,7 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</div>
 						<!-- 第三部分按钮控件 -->
 						<div class="submitTool">
-							<input type="submit" class="primary-btn" id="assessSubmit">
+							<input type="button" class="primary-btn" id="assessSubmit" value="提交">
 						</div>
 					</form>
 				</div>

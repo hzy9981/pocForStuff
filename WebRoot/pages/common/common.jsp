@@ -69,7 +69,7 @@ String basePath_common = request.getScheme()+"://"+request.getServerName()+":"+r
                     </li>
                     
                     <li>
-                        <a href=""><i class="fa fa-fw fa-dashboard"></i>进 入 问 答 室</a>
+                        <a href="<%=basePath_common%>pages/onlineChat.jsp"><i class="fa fa-fw fa-dashboard"></i>进 入 问 答 室</a>
                     </li>
                     
                 </ul>
