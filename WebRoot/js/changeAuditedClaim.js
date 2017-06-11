@@ -92,6 +92,6 @@ var searchClaim =function(){
 }
 
 var showClaimDetail = function(a){
-	var caseid = $("a").attr("abc");
+	var caseid = $(a).attr("abc");
 	window.open("/pocForStuff/pages/auditor/showClaimDetail.jsp?caseid="+caseid+"&action=change");
 }
