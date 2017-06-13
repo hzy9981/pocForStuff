@@ -74,9 +74,11 @@ private AssessorMapper assessorMapper;
                      //重命名上传后的文件名  
                      String fileName = files[i].getOriginalFilename();  
                      //定义上传路径  
-                     String path = "D:/upload/"+sdf.format(date)+"/" + fileName;
+                     //String path = "E:/workspace3/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/pocForStuff/upload/"+sdf.format(date)+"/" + fileName;
+                     String path = "E:/workspace3/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/pocForStuff/upload/"+ fileName;
+                     //photoPath += "http:/localhost:8080/pocForStuff/upload/"+sdf.format(date)+"/" + fileName;;
+                     photoPath += "/pocForStuff/upload/"+ fileName;;
                      photoPath += ",";
-                     photoPath += path;
                      File localFile = new File(path);  
                      files[i].transferTo(localFile);  
                  }  

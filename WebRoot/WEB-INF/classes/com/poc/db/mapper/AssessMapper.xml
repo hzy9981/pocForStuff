@@ -16,6 +16,7 @@
     <result column="apply_User_Phone" property="applyUserPhone" jdbcType="VARCHAR" />
     <result column="assessor" property="assessor" jdbcType="VARCHAR" />
     <result column="assess_Time" property="assessTime" jdbcType="VARCHAR" />
+    <result column="case_Describe" property="describe" jdbcType="LONGVARCHAR" />
   </resultMap>
   <resultMap id="BlobResultMap" type="com.poc.db.model.Assess" extends="BaseResultMap" >
     <!--

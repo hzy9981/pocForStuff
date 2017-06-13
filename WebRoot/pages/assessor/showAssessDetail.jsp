@@ -32,37 +32,35 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<!-- 第一部分表单填写 -->
 						<div>
 							<div class="form-control part1">
-								<label>车辆车牌</label> <input type="text" name="plateNumber">
+								<label>车辆车牌</label> <input type="text" id="plateNumber" name="plateNumber">
 							</div>
 							<div class="form-control part1 div_textarea">
 								<label>定损描述</label> <textarea ></textarea>
 							</div>
 							<div class="form-control part1">
-								<label>申请用户</label> <input type="text" name="applyUser">
+								<label>申请用户</label> <input type="text" id="applyUser" name="applyUser">
 							</div>
 							<div class="form-control part1">
-								<label>用户电话</label> <input type="text" name="applyUserPhone">
+								<label>用户电话</label> <input type="text" id="applyUserPhone" name="applyUserPhone">
 							</div>
 							<div class="form-control part1">
-								<label>估算金额</label> <input type="text" name="sum">
+								<label>估算金额</label> <input type="text" id="sum" name="sum">
 							</div>
 						</div>
 						<!-- 第二部分图片上传 -->
 						<div>
-							<div class="line_01">图 片 上 传</div>
 							<div class="form-group" id="caseIma">
-								<label class="control-label">案例图片</label> <label
-									class="btn btn-primary">选择图片 <input type="file"
-									style="display:none" class="form-control" id="caseImage"
-									name="caseImage" onchange="viewImage(this)" />
-								</label>
+								<label class="control-label">案例图片</label>
 							</div>
 							<!-- <input type="file" class="btn btn-primary" value="上传图片" id="doc" name="doc" onclick="imgUploadAndShow();"> -->
 							<!-- 图片缩略图展示 -->
 							<div class="imgShow">
 							<div id="localImag0">
-								<img id="preview0" class="display-none"/>
-								<!-- <input type="hidden" id="imgUrl" name="imgUrl"> -->
+								<img id="preview0" />
+								<img id="preview1" />
+								<img id="preview2" />
+								<img id="preview3" />
+								<img id="preview4" />
 							</div>
 							</div>
 							<!-- 缩略图展示结束 -->
